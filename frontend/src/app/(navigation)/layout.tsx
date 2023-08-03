@@ -23,7 +23,7 @@ export default function NavigationLayout({ children }: { children: React.ReactNo
           </label>
         </div>
         <div className="flex-1 ml-8">
-          <Link href="/top" className="text-primary">
+          <Link href="/top" className="text-primary text-xl tracking-wider">
             ai単語
           </Link>
         </div>
@@ -35,13 +35,19 @@ export default function NavigationLayout({ children }: { children: React.ReactNo
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 h-full bg-white text-base-content">
             <li>
-              <Link href="/top">Top</Link>
+              <Link href="/top" className="text-lg">
+                Top
+              </Link>
             </li>
             <li>
-              <Link href="/words">Words</Link>
+              <Link href="/words" className="text-lg">
+                Words
+              </Link>
             </li>
             <li>
-              <Link href="/articles">Articles</Link>
+              <Link href="/articles" className="text-lg">
+                Articles
+              </Link>
             </li>
           </ul>
         </div>
