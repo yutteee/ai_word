@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <header className="navbar bg-background">
-        <div className=" text-primary text-xl tracking-wider ml-8">daisyUI</div>
+        <div className=" text-primary text-xl tracking-wider ml-8">ai単語</div>
       </header>
       <main className="flex flex-col	gap-y-12 items-center	justify-center h-[calc(100vh-64px)]">
         <Image src="/logo.png" alt="logo" width="200" height="245" />
