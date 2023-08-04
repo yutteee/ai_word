@@ -13,9 +13,9 @@ export const WordsCard: React.FC<Props> = (props) => {
   return (
     <Link
       href={`/words/${title}`}
-      className="card w-64 h-20 px-6 bg-white shadow-shadow flex flex-row items-center justify-between hover:bg-hover"
+      className="card w-56 h-20 px-6 bg-white drop-shadow-base flex flex-row items-center justify-between hover:bg-hover"
     >
-      <div className="flex flex-row">
+      <div className="flex flex-row items-center">
         <div className="text-lg font-bold">{title}</div>
         <div>&#40;{count}&#41;</div>
       </div>

@@ -12,7 +12,7 @@ export default function Home() {
         <Image src="/logo.png" alt="logo" width="200" height="245" />
         <Link
           href="/top"
-          className="btn px-12 text-2xl tracking-wider font-light bg-white text-primary border-primary drop-shadow-base hover:bg-hover hover:border-primary relative"
+          className="btn px-12 text-2xl tracking-wider font-light bg-white text-primary border-primary drop-drop-shadow-base hover:bg-hover hover:border-primary relative"
         >
           start
           <MdNavigateNext className="inline-block w-5 h-5 stroke-current absolute right-2" />

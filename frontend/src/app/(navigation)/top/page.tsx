@@ -1,7 +1,5 @@
+import { FloatingActionButton } from "@/components/buttons/FloatingActionButton/FloatingActionButton";
+
 export default function Top() {
-  return (
-    <div>
-      <h1>Top</h1>
-    </div>
-  );
+  return <FloatingActionButton />;
 }

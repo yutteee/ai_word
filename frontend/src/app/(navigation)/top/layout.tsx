@@ -4,10 +4,10 @@ export default function Layout(props: {
   articles: React.ReactNode;
 }) {
   return (
-    <>
+    <div className="flex flex-col gap-12 m-12">
       {props.children}
       {props.words}
       {props.articles}
-    </>
+    </div>
   );
 }

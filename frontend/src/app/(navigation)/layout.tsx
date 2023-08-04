@@ -30,7 +30,7 @@ export default function NavigationLayout({ children }: { children: React.ReactNo
       </header>
       <main className="drawer lg:drawer-open ">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">{children}</div>
+        <div className="drawer-content">{children}</div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-60 h-full bg-white text-base-content">

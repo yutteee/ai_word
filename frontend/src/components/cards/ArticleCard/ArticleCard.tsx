@@ -13,7 +13,7 @@ export const ArticleCard: React.FC<Props> = (props) => {
   return (
     <Link
       href={`articles/${id}`}
-      className="card bg-white shadow-shadow p-4 flex flex-col gap-4 w-80"
+      className="card bg-white drop-shadow-base p-4 flex flex-col gap-4 w-64 hover:bg-hover transition-all"
     >
       <div
         className="h-24"
