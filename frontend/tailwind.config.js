@@ -9,6 +9,8 @@ module.exports = {
         border: "#D6D6D6",
         primary: "#97D0D3",
         hover: "#F9F9F9",
+        black: "#000000",
+        hoverPrimary: "#7ED1D7",
       },
       dropShadow: {
         base: "1px 2px 8px rgba(0, 0, 0, 0.10)",
