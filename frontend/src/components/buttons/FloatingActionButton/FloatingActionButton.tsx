@@ -1,13 +1,11 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
-import { useRouter } from "next/router";
+import React, { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
-import { BaseButton } from "../BaseButton/BaseButton";
-import { BiSolidEdit } from "react-icons/bi";
-import { AiFillFolderAdd } from "react-icons/ai";
-import { db } from "@/db";
+import { WordAddButton } from "./WordAddButton/WordAddButton";
+import { FolderAddButton } from "./FolderAddButton/FolderAddButton";
+import { ArticleAddButton } from "./ArticleAddButton/ArticleAddButton";
 
 interface Props {
   children?: React.ReactNode;
@@ -27,14 +25,9 @@ export const FloatingActionButton: React.FC<Props> = (props) => {
       </div>
       {isModalOpen && (
         <div className="fixed bottom-28 right-12 flex flex-col gap-y-4 z-50">
-          <BaseButton>
-            <AiFillFolderAdd size="1rem" />
-            <div>単語帳を追加</div>
-          </BaseButton>
-          <BaseButton>
-            <BiSolidEdit size="1rem" />
-            <div>文章を追加</div>
-          </BaseButton>
+          <WordAddButton />
+          <FolderAddButton />
+          <ArticleAddButton />
         </div>
       )}
     </>

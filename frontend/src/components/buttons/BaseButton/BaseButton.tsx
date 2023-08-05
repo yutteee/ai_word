@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 interface Props {
   children?: React.ReactNode;
@@ -7,21 +7,18 @@ interface Props {
   labelId?: string;
 }
 
-export const BaseButton: React.FC<Props> = ({
-  outline = false,
-  children,
-  handleClick,
-  labelId,
-}) => {
-  const style = outline
-    ? "btn border border-primary text-primary bg-white hover:bg-hover hover:border-primary transition-all"
-    : "btn bg-primary text-white border-none drop-shadow-base hover:bg-hoverPrimary transition-all";
+export const BaseButton: React.FC<Props> = memo(
+  ({ outline = false, children, handleClick, labelId }) => {
+    const style = outline
+      ? "btn border border-primary text-primary bg-white hover:bg-hover hover:border-primary transition-all"
+      : "btn bg-primary text-white border-none drop-shadow-base hover:bg-hoverPrimary transition-all";
 
-  const props = {
-    className: style,
-    onClick: handleClick,
-    htmlFor: labelId,
-  };
+    const props = {
+      className: style,
+      onClick: handleClick,
+      htmlFor: labelId,
+    };
 
-  return labelId ? <label {...props}>{children}</label> : <button {...props}>{children}</button>;
-};
+    return labelId ? <label {...props}>{children}</label> : <button {...props}>{children}</button>;
+  }
+);
