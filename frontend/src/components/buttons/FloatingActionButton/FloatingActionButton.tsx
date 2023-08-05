@@ -7,6 +7,7 @@ import { RxCross2 } from "react-icons/rx";
 import { BaseButton } from "../BaseButton/BaseButton";
 import { BiSolidEdit } from "react-icons/bi";
 import { AiFillFolderAdd } from "react-icons/ai";
+import { db } from "@/db";
 
 interface Props {
   children?: React.ReactNode;
