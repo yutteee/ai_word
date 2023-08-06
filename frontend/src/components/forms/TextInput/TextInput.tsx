@@ -5,7 +5,7 @@ interface Props {
   label: string;
   required?: boolean;
   text: string;
-  setText: (text: string) => void;
+  setText: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const TextInput: React.FC<Props> = memo((props) => {
