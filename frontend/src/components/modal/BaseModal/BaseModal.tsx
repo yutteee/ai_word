@@ -12,7 +12,7 @@ export const BaseModal: React.FC<Props> = (props) => {
     <>
       <input type="checkbox" id={labelId} className="modal-toggle" />
       <div className="modal">
-        <div className="modal-box">{children}</div>
+        <div className="modal-box bg-white">{children}</div>
         <label className="modal-backdrop" htmlFor={labelId}>
           Close
         </label>
