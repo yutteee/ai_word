@@ -1,12 +1,19 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { BaseButton } from "../../BaseButton/BaseButton";
 import { AiFillFileAdd } from "react-icons/ai";
 import { BaseModal } from "../../../modal/BaseModal/BaseModal";
+import { TextInput } from "../../../forms/TextInput/TextInput";
 
 interface Props {}
 
 export const WordAddButton: React.FC<Props> = (props) => {
   const labelId = "word-add-button";
+
+  const [wordEnglish, setWordEnglish] = useState("");
+  const [wordJapanese, setWordJapanese] = useState("");
+
   return (
     <>
       <BaseButton labelId={labelId}>
@@ -16,26 +23,8 @@ export const WordAddButton: React.FC<Props> = (props) => {
       <BaseModal labelId={labelId}>
         <div className="flex items-center justify-center flex-col gap-4">
           <div className="w-full">
-            <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">英単語</span>
-              </label>
-              <input
-                type="text"
-                placeholder="英単語"
-                className="input input-bordered w-full max-w-xs bg-white text-base"
-              />
-            </div>
-            <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">日本語訳</span>
-              </label>
-              <input
-                type="text"
-                placeholder="日本語"
-                className="input input-bordered w-full max-w-xs bg-white text-base"
-              />
-            </div>
+            <TextInput label="英単語" text={wordEnglish} setText={setWordEnglish} required />
+            <TextInput label="日本語訳" text={wordJapanese} setText={setWordJapanese} required />
             <div className="form-control w-full max-w-xs">
               <label className="label">
                 <span className="label-text">保存先の単語帳</span>
