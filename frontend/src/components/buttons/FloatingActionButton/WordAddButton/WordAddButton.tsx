@@ -6,17 +6,18 @@ import { AiFillFileAdd } from "react-icons/ai";
 import { BaseModal } from "../../../modal/BaseModal/BaseModal";
 import { TextInput } from "../../../forms/TextInput/TextInput";
 import { SelectBox } from "../../../forms/SelectBox/SelectBox";
+import { Textarea } from "../../../forms/Textarea/Textarea";
 
 interface Props {}
 
 export const WordAddButton: React.FC<Props> = (props) => {
   const labelId = "word-add-button";
+  const sampleOptions = ["単語帳1", "単語帳2", "単語帳3"];
 
   const [wordEnglish, setWordEnglish] = useState("");
   const [wordJapanese, setWordJapanese] = useState("");
-
-  const sampleOptions = ["単語帳1", "単語帳2", "単語帳3"];
   const [selectedOption, setSelectedOption] = useState("");
+  const [memo, setMemo] = useState("");
 
   return (
     <>
@@ -35,15 +36,7 @@ export const WordAddButton: React.FC<Props> = (props) => {
               value={selectedOption}
               setValue={setSelectedOption}
             />
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">メモ</span>
-              </label>
-              <textarea
-                className="textarea textarea-bordered h-24 bg-white"
-                placeholder="メモ"
-              ></textarea>
-            </div>
+            <Textarea label="例文" text={memo} setText={setMemo} />
           </div>
           <BaseButton outline>
             <div className="text-base font-normal">追加</div>
