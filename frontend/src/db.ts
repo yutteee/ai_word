@@ -1,7 +1,7 @@
 import Dexie, { Table } from "dexie";
 
 export interface Word {
-  id: number;
+  id?: number;
   word_en: string;
   word_jp: string;
   memo: string;
@@ -9,12 +9,12 @@ export interface Word {
 }
 
 export interface folder {
-  id: number;
+  id?: number;
   folder: string;
 }
 
 export interface Article {
-  id: number;
+  id?: number;
   title_en: string;
   text_en: string;
   title_jp: string;
