@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { WordsCard } from "../../components/cards/WordsCard/WordsCard";
-import { db } from "@/db";
+import { db } from "../../db";
 
 interface Props {}
 
