@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { BaseModal } from "../BaseModal/BaseModal";
-import { TextInput } from "@/components/forms/TextInput/TextInput";
-import { SelectBox } from "@/components/forms/SelectBox/SelectBox";
-import { Textarea } from "@/components/forms/Textarea/Textarea";
-import { BaseButton } from "@/components/buttons/BaseButton/BaseButton";
-import { db } from "@/db";
+import { TextInput } from "../../forms/TextInput/TextInput";
+import { SelectBox } from "../../forms/SelectBox/SelectBox";
+import { Textarea } from "../../forms/Textarea/Textarea";
+import { BaseButton } from "../../buttons/BaseButton/BaseButton";
+import { db } from "../../../db";
 
 interface Props {
   labelId: string;
@@ -37,19 +37,20 @@ export const WordModal: React.FC<Props> = (props) => {
     getFolders();
   }, []);
 
-  const addWord = useCallback(() => {
+  const addWord = useCallback(async () => {
     try {
-      db.words.add({
+      await db.words.add({
         word_en: wordEnglish,
         word_jp: wordJapanese,
         folder: selectedOption,
         memo: memo,
       });
       setIsOpen(false);
+      console.log("success");
     } catch (error) {
       console.error(error);
     }
-  }, []);
+  }, [wordEnglish, wordJapanese, selectedOption, memo]);
 
   return (
     <BaseModal labelId={labelId} isOpen={isOpen} setIsOpen={setIsOpen}>

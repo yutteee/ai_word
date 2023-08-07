@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { BaseButton } from "../../BaseButton/BaseButton";
 import { AiFillFolderAdd } from "react-icons/ai";
-import { FolderModal } from "@/components/modal/FolderModal/FolderModal";
+import { FolderModal } from "../../../modal/FolderModal/FolderModal";
 
 interface Props {}
 

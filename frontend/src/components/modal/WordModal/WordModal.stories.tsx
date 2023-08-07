@@ -1,10 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { WordModal } from './WordModal';
+import { WordModal } from "./WordModal";
 
-type T = typeof WordModal
+type T = typeof WordModal;
 
 export default {
   component: WordModal,
 } satisfies Meta<T>;
 
-export const Default: StoryObj<T> = {};
+export const Default: StoryObj<T> = {
+  args: {
+    labelId: "word-add-button",
+    isOpen: true,
+    setIsOpen: () => {},
+  },
+};

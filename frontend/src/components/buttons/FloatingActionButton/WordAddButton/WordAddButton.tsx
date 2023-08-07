@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { BaseButton } from "../../BaseButton/BaseButton";
 import { AiFillFileAdd } from "react-icons/ai";
-import { WordModal } from "@/components/modal/WordModal/WordModal";
+import { WordModal } from "../../../modal/WordModal/WordModal";
 
 interface Props {}
 

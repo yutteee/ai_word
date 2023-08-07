@@ -2,9 +2,9 @@
 
 import React, { useState, useCallback } from "react";
 import { BaseModal } from "../BaseModal/BaseModal";
-import { TextInput } from "@/components/forms/TextInput/TextInput";
-import { BaseButton } from "@/components/buttons/BaseButton/BaseButton";
-import { db } from "@/db";
+import { TextInput } from "../../forms/TextInput/TextInput";
+import { BaseButton } from "../../buttons/BaseButton/BaseButton";
+import { db } from "../../../db";
 
 interface Props {
   labelId: string;
