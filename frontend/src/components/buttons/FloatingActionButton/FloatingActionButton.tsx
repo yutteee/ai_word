@@ -16,7 +16,7 @@ export const FloatingActionButton: React.FC<Props> = (props) => {
 
   return (
     <>
-      <div className="fixed z-50 bottom-12 right-12">
+      <div className="fixed z-10 bottom-12 right-12">
         <label className="btn btn-circle bg-primary border-none  drop-shadow-base swap swap-rotate hover:bg-hoverPrimary">
           <input type="checkbox" onChange={() => setIsModalOpen(!isModalOpen)} />
           <AiOutlinePlus size="1rem" className="swap-off fill-current text-white" />
@@ -24,7 +24,7 @@ export const FloatingActionButton: React.FC<Props> = (props) => {
         </label>
       </div>
       {isModalOpen && (
-        <div className="fixed bottom-28 right-12 flex flex-col gap-y-4 z-50">
+        <div className="fixed bottom-28 right-12 flex flex-col gap-y-4 z-10">
           <WordAddButton />
           <FolderAddButton />
           <ArticleAddButton />

@@ -42,7 +42,7 @@ function foldersReducer(state: FolderAndCount[], action: { type: string; payload
     case "update":
       return state.map((folder: FolderAndCount) => {
         if (folder.folderName === action.payload.id) {
-          return action.payload;
+          return { ...folder, folderName: action.payload.folderName };
         }
         return folder;
       });
