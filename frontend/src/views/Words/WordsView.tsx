@@ -1,13 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { WordsCard } from "../../components/cards/WordsCard/WordsCard";
 import { db } from "../../db";
+import { useFolders, useFoldersDispatch } from "@/app/FoldersContext";
 
 interface Props {}
 
 export const WordsView: React.FC<Props> = (props) => {
-  const [folders, setFolders] = useState<{ folderName: string; wordsCount: number }[] | null>(null);
+  const folders = useFolders();
+  const dispatch = useFoldersDispatch();
   useEffect(() => {
     const getFolders = async () => {
       try {
@@ -26,7 +28,9 @@ export const WordsView: React.FC<Props> = (props) => {
         }
 
         console.log(folderNamesAndWordsCount);
-        setFolders(folderNamesAndWordsCount);
+
+        dispatch({ type: "init", payload: folderNamesAndWordsCount });
+
         return folderNamesAndWordsCount;
       } catch (error) {
         console.error(error);

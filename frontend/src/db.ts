@@ -8,7 +8,7 @@ export interface Word {
   folder?: string;
 }
 
-export interface folder {
+export interface Folder {
   id?: number;
   folder: string;
 }
@@ -24,7 +24,7 @@ export interface Article {
 
 export class MySubClassedDexie extends Dexie {
   words: Table<Word>;
-  folders: Table<folder>;
+  folders: Table<Folder>;
   articles: Table<Article>;
 
   constructor() {
