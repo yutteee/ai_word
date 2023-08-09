@@ -51,7 +51,7 @@ export const WordsCard: React.FC<Props> = memo((props) => {
       </Link>
       {isMenuOpen && (
         <div className="drop-shadow-base absolute mt-1 z-10">
-          <FolderMenu />
+          <FolderMenu folderName={title} />
         </div>
       )}
     </div>
