@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import { WordsCard } from "../../components/cards/WordsCard/WordsCard";
 import { db } from "../../db";
-import { useFolders, useFoldersDispatch } from "@/app/FoldersContext";
+import { useFolders, useFoldersDispatch } from "../../app/FoldersContext";
 
 interface Props {}
 
