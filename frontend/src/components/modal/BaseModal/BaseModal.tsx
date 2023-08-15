@@ -17,10 +17,16 @@ export const BaseModal: React.FC<Props> = (props) => {
         id={labelId}
         className="modal-toggle"
         checked={isOpen}
+        onChange={() => setIsOpen(!isOpen)}
       />
       <div className="modal">
         <div className="modal-box bg-white">{children}</div>
-        <label className="modal-backdrop" htmlFor={labelId} onClick={() => setIsOpen(false)} role="button">
+        <label
+          className="modal-backdrop"
+          htmlFor={labelId}
+          onClick={() => setIsOpen(false)}
+          role="button"
+        >
           Close
         </label>
       </div>

@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom'
+import "@testing-library/jest-dom";
 import { BaseModal } from "../BaseModal";
 import { render, screen, fireEvent } from "@testing-library/react";
 
@@ -6,8 +6,8 @@ const props = {
   isOpen: true,
   setIsOpen: () => {},
   labelId: "test",
-  children: <div>テスト</div>
-}
+  children: <div>テスト</div>,
+};
 
 describe("BaseModal", () => {
   test("isOpenがtrueの時、モーダルが表示される", () => {
@@ -20,7 +20,7 @@ describe("BaseModal", () => {
     render(<BaseModal {...props} setIsOpen={setIsOpen} />);
     const backdrop = screen.getByRole("button");
     fireEvent.click(backdrop);
-    expect(setIsOpen).toHaveBeenCalledTimes(1);
+    expect(setIsOpen).toHaveBeenCalledTimes(2); // 1回目はtrue, 2回目はfalse
     expect(setIsOpen).toHaveBeenCalledWith(false);
   });
-})
+});
