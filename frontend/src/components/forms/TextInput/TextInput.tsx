@@ -16,7 +16,7 @@ export const TextInput: React.FC<Props> = memo((props) => {
       <div className="form-control w-full max-w-xs">
         <label className="label justify-start">
           <span className="label-text">{label}</span>
-          {required && <BsAsterisk className="text-red-500 ml-1" size="8" />}
+          {required && <BsAsterisk className="text-red-500 ml-1" size="8" role="img" />}
         </label>
         <input
           type="text"

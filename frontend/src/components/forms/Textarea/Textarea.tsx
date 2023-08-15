@@ -14,7 +14,7 @@ export const Textarea: React.FC<Props> = (props) => {
     <div className="form-control">
       <label className="label justify-start">
         <span className="label-text">{label}</span>
-        {required && <BsAsterisk className="text-red-500 ml-1" size="8" />}
+        {required && <BsAsterisk className="text-red-500 ml-1" size="8" role="img" />}
       </label>
       <textarea
         className="textarea textarea-bordered h-24 bg-white"
