@@ -17,7 +17,7 @@ export const BaseModal: React.FC<Props> = (props) => {
         id={labelId}
         className="modal-toggle"
         checked={isOpen}
-        onChange={() => setIsOpen(!isOpen)}
+        onChange={() => setIsOpen(isOpen)}
       />
       <div className="modal">
         <div className="modal-box bg-white">{children}</div>
