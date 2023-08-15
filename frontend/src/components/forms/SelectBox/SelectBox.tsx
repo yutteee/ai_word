@@ -16,9 +16,9 @@ export const SelectBox: React.FC<Props> = (props) => {
     <div className="form-control w-full max-w-xs">
       <label className="label justify-start">
         <span className="label-text">{label}</span>
-        {required && <BsAsterisk className="text-red-500 ml-1" size="8" />}
+        {required && <BsAsterisk className="text-red-500 ml-1" size="8" role="img" />}
       </label>
-      {options ? (
+      {options.length !== 0 ? (
         <select
           className="select select-bordered bg-white font-normal text-base"
           value={value}
