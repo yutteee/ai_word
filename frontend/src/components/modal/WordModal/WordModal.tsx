@@ -1,6 +1,6 @@
 "use strict";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { BaseModal } from "../BaseModal/BaseModal";
 import { TextInput } from "../../forms/TextInput/TextInput";
 import { SelectBox } from "../../forms/SelectBox/SelectBox";

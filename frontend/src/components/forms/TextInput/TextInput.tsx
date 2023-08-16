@@ -8,7 +8,7 @@ interface Props {
   setText: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const TextInput: React.FC<Props> = memo((props) => {
+export const TextInput: React.FC<Props> = memo(function TextInput(props) {
   const { label, required = false, text, setText } = props;
 
   return (

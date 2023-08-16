@@ -13,7 +13,7 @@ interface Props {
   name?: string;
 }
 
-export const FolderModal: React.FC<Props> = memo((props) => {
+export const FolderModal: React.FC<Props> = memo(function FolderModal(props) {
   const { labelId, isOpen, setIsOpen, handleClick, name } = props;
 
   const [folderName, setFolderName] = useState(name || "");
