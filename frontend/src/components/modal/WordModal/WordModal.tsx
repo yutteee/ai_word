@@ -27,7 +27,7 @@ export const WordModal: React.FC<Props> = (props) => {
 
   const handleAddWord = useCallback(() => {
     addWord(wordEnglish, wordJapanese, selectedOption, memo, setIsOpen);
-  }, [wordEnglish, wordJapanese, selectedOption, memo]);
+  }, [wordEnglish, wordJapanese, selectedOption, memo, setIsOpen]);
 
   return (
     <BaseModal labelId={labelId} isOpen={isOpen} setIsOpen={setIsOpen}>
