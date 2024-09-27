@@ -10,7 +10,7 @@ interface Props {
   count: number;
 }
 
-export const WordsCard: React.FC<Props> = memo((props) => {
+export const WordsCard: React.FC<Props> = memo(function WordsCard(props) {
   const { title, count } = props;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
