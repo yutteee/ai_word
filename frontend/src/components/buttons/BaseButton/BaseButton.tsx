@@ -7,18 +7,21 @@ interface Props {
   labelId?: string;
 }
 
-export const BaseButton: React.FC<Props> = memo(
-  ({ outline = false, children, handleClick, labelId }) => {
-    const style = outline
-      ? "btn border border-primary text-primary bg-white hover:bg-hover hover:border-primary transition-all"
-      : "btn bg-primary text-white border-none drop-shadow-base hover:bg-hoverPrimary transition-all";
+export const BaseButton: React.FC<Props> = memo(function BaseButton({
+  outline = false,
+  children,
+  handleClick,
+  labelId,
+}) {
+  const style = outline
+    ? "btn border border-primary text-primary bg-white hover:bg-hover hover:border-primary transition-all"
+    : "btn bg-primary text-white border-none drop-shadow-base hover:bg-hoverPrimary transition-all";
 
-    const props = {
-      className: style,
-      onClick: handleClick,
-      htmlFor: labelId,
-    };
+  const props = {
+    className: style,
+    onClick: handleClick,
+    htmlFor: labelId,
+  };
 
-    return labelId ? <label {...props}>{children}</label> : <button {...props}>{children}</button>;
-  }
-);
+  return labelId ? <label {...props}>{children}</label> : <button {...props}>{children}</button>;
+});

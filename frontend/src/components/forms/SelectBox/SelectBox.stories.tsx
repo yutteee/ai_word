@@ -21,3 +21,11 @@ export const Required: StoryObj<T> = {
     required: true,
   },
 };
+
+export const NoOptions: StoryObj<T> = {
+  ...Default,
+  args: {
+    ...Default.args,
+    options: [],
+  },
+};
